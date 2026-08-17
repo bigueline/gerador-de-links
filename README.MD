@@ -53,7 +53,7 @@ Durante o desenvolvimento, consegui praticar a identificação e correção de b
 
 ## 🌐 Projeto online
 
-Acesse o projeto através do link:
+Acesse o projeto através do link: https://bigueline.github.io/gerador-de-links/
 
 ## 📌 Status
 
