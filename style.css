@@ -10,8 +10,8 @@
   --bg-url:  url(./assets/bg-mobile.jpg);
   --stroke-color: rgba(255, 255, 255, 0.5);
   --surface-color: rgba(255, 255, 255, 0.05);
-  --surface-color-hover: rgba(0, 0, 0, 0.02);
-  --highlight-color: rgba(255, 255, 255, 0.02);
+  --surface-color-hover: rgba(0, 0, 0, 0.5);
+  --highlight-color: rgba(255, 255, 255, 0.5);
   --switch-bg-url: url(assets/moon-stars.svg);
 }
 
@@ -77,14 +77,20 @@ body * {
 
   position: absolute;
   top: 50%;
-  left: 0px;
+  left: 0;
   z-index: 1;
   transform: translateY(-50%);
+
+  animation: slide-back 0.2s forwards;
+  transition: outline 0.2s;
 }
 
 .light #switch button {
-  right: 0;
-  left: initial;
+ animation: slide-in 0.2s forwards;
+}
+
+#switch button:hover {
+outline: 8px solid var(--highlight-color);
 }
 
 #switch span {
@@ -126,12 +132,15 @@ text-decoration: none;
 font-weight: 400;
 
 transition: background 0.5s, border 0.2s;
+
 }
 
 /* psesudo-selectors */
 ul li a:hover {
   background: var(--surface-color);
   border: 1px solid var(--text-color);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
 }
 
 /* social links */
@@ -177,5 +186,21 @@ footer {
 
 /* animation */
 @keyframes slide-in {
+  from {
+    left: 0;
+
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-back  {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
   
 }
