@@ -3,7 +3,7 @@
 
 
 <p align="center">
-<img alt="gerador de links" src=".github/preview.jpg"
+<img alt="gerador de links" src=".github/preview.png"
 width="100%">
 </p>
 
